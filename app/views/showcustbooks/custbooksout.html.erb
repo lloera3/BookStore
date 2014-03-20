@@ -1,0 +1,13 @@
+<center><h1>These are the Courses for <%= @customer_name %> </h1></center><br /> <br />
+    
+  <center><table width = 65% border = 1> 
+     <tr> <th> Book Name </th><th> Genre </th>  <th> Book Price </th></tr>   
+   <% @book_list.each do |m| %>
+      <% p = m.price %>
+                
+        <tr> <td> <%= m.name  %> </td> <td> <%= m.bookgenre %> </td> <td> <%=h number_to_currency(p.price) %> </td> </tr> 
+      <% end %> </table> </center><br /> <br />
+	  
+	
+<%= link_to "Home Page", root_path %>
+<li> <%= link_to "Back to Maintenance Page", maintenance_maintview_path %> </li>

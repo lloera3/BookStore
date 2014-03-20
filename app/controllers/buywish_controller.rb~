@@ -1,0 +1,4 @@
+class BuywishController < ApplicationController
+  def buywishtype
+  end
+end

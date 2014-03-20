@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Bookstore</title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<div id = "topbanner"><br/><br/><br/><br/><br/><br/>
+	<center><h2><font color = "#B22400"><%= @page_title || "Welcome to Liborio's Bookstore" %> </font color</h2></center>
+	<div align = "right"><p><%= link_to "Return to Homepage", root_path %></p></div>
+</div>
+
+
+<%= yield %>
+<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+<br /><br /><br /><br /><br /><br /><br /><br /><br />
+
+</body>
+</html>

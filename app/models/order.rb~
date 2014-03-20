@@ -1,0 +1,7 @@
+class Order < ActiveRecord::Base
+  attr_accessible :book_id, :customer_id, :price_id
+
+  belongs_to :books
+  belongs_to :customers
+  belongs_to :prices
+end

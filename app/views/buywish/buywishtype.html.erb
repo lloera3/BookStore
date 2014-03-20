@@ -1,0 +1,7 @@
+	<h1>Customers & Their Options to Buy or Add to Wishlist</h1>
+		<br /><br /><br /><br />
+	<center><% @buywish.each do |m| %>
+		<%= m.buywish %><br />
+	<% end %></center>
+<br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+<li> <%= link_to "Back to Maintenance Page", maintenance_maintview_path %> </li>

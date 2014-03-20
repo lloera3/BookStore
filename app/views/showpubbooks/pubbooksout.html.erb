@@ -1,0 +1,15 @@
+<h2>Choose From Our Variety of Best Sellers!</h2><br /><br /><br /><br /><br />
+<center><table width = 65% border = 0>
+<tr><th>Book Cover</th><th>Book Title</th><th>Author</th><th></th><th>Publisher</th></tr>
+<% @books.each do |m| %>
+<tr><td><div id = "tablepresent2"><br /><%= image_tag("#(m.image)") %><td><font color = #780000><%= m.name %></font></td><td><% = m.author %></td></td><td><% = m.publisher %></td></tr>
+<tr></tr>
+<tr></tr>
+<tr></tr>
+	<% end %>
+	</table></center>
+<p>
+<ul>
+<li><%= link_to "Return to Home Page", root_root %></li>
+</ul>
+</p>

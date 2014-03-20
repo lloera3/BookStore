@@ -1,0 +1,14 @@
+	<h2>Enter the Last Name of the customer for whom you want the Books ordered </h2>
+ 
+		<%= form_tag(showcustbooks_custbooksout_path, :controller => "showcustbooks", :action => "custbooksout", :method => "post") do %>
+			<div class="field">
+				<%= label_tag :Customer_Name %><br />
+				<%= text_field_tag :customer_name_in %>
+			</div>
+   
+		<div class="actions">
+			<%= submit_tag "Submit Customer Name" %>
+		</div>
+		<% end %>
+
+<%= link_to 'Output Books Purchased', showcustbooks_custbooksout_path %>

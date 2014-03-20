@@ -1,0 +1,60 @@
+<%= form_for(@book) do |f| %>
+  <% if @book.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@book.errors.count, "error") %> prohibited this book from being saved:</h2>
+
+      <ul>
+      <% @book.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :book_name %><br />
+    <%= f.text_field :book_name %>
+  </div>
+<br />
+  <div class="field">
+    <%= f.label :author %><br />
+    <%= f.text_field :author %>
+  </div>
+<br />
+  <div class="field">
+    <%= f.label :publisher %><br />
+    <%= f.text_field :publisher %>
+  </div>
+<br />
+  <div class="field">
+ <%= f.label :published %><br />
+   <%= f.date_select :published, :order => [:year], :start_year => 1800, :end_year => Time.now.year, :prompt => {:year => "Select year"} %>
+ 
+    
+<br />
+  <div class="field">    
+        <%= f.label :genre %><br />   
+        <%= f.select :genre, [['---Select a Genre---', ''],
+        	['Action Adventure', 'Action Adventure'],
+                ['Comedy', 'Comedy'],
+                ['Drama', 'Drama'],
+                ['Educational', 'Educational'],
+                ['Horror', 'Horror'],
+                ['Mystery', 'Mystery'],
+                ['Poetry', 'Poetry'],
+                ['Romance', 'Romance'],
+                ['Satire', 'Satire'],
+                ['Tragic Comedy', 'Tragic Comedy']] %>
+  </div>
+<br />
+  <div class="field">
+    <%= f.label :book_id, 'Book ID' %><br />
+    <%= f.number_field :book_id %>
+  </div>
+<br />
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+  <%= link_to "Home Page", root_path %>
+<li> <%= link_to "Back to Maintenance Page", maintenance_maintview_path %> </li>
+<% end %>
