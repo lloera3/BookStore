@@ -1,5 +1,5 @@
 <p id="notice"><%= notice %></p>
-
+<center>
 <p>
   <b>Book name:</b>
   <%= @book.book_name %>
@@ -16,7 +16,7 @@
 </p>
 
 <p>
-  <b>Published:</b>
+  <b>Year Published:</b>
   <%= @book.published %>
 </p>
 
@@ -29,7 +29,7 @@
   <b>Book:</b>
   <%= @book.book_id %>
 </p>
-
+</ center>
 
 <%= link_to 'Edit', edit_book_path(@book) %> |
 <%= link_to 'Back', books_path %>

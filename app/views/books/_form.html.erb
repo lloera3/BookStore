@@ -1,3 +1,4 @@
+<center>
 <%= form_for(@book) do |f| %>
   <% if @book.errors.any? %>
     <div id="error_explanation">
@@ -57,4 +58,5 @@
   </div>
   <%= link_to "Home Page", root_path %>
 <li> <%= link_to "Back to Maintenance Page", maintenance_maintview_path %> </li>
+  </ center>
 <% end %>
